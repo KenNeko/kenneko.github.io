@@ -1,5 +1,5 @@
 self.addEventListener('install', function (event) {
-  console.log('Hello from Typing Mind!');
+  console.log('installing service worker');
 });
 
 self.addEventListener('fetch', function (event) {
@@ -19,6 +19,6 @@ self.addEventListener('fetch', function (event) {
       } catch (error) {
         return caches.match(event.request);
       }
-    })()
+    })(),
   );
 });
